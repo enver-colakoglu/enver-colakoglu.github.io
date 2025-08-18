@@ -1,89 +1,608 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kişisel Web Sitem</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    nav {
-      background: #444;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: .5rem;
-    }
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enver Çolakoğlu | IT Professional, Music Producer, TA2DTZ</title>
+    <link rel="icon" type="image/png" href="https://envercolakoglu.infy.uk/images/favicon.png">
+    <meta name="description" content="Enver Çolakoğlu, an IT expert in cybersecurity and PBX systems, music producer as Travma, and amateur radio operator (TA2DTZ).">
+    <meta name="keywords" content="Enver Çolakoğlu, IT Professional, Music Producer, Travma, Amateur Radio, TA2DTZ, Cybersecurity, Backup Solutions, PBX Systems, Sophos, Kaspersky, FortiGate">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Enver Çolakoğlu">
+    <link rel="canonical" href="https://envercolakoglu.infy.uk/">
+    <link rel="alternate" href="https://envercolakoglu.infy.uk/" hreflang="en" />
+    <link rel="alternate" href="https://envercolakoglu.infy.uk/" hreflang="x-default" />
+    <meta property="og:title" content="Enver Çolakoğlu - IT Professional & Music Producer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://envercolakoglu.infy.uk/">
+    <meta property="og:image" content="https://envercolakoglu.infy.uk/images/bio.png">
+    <meta property="og:description" content="Enver Çolakoğlu is an IT specialist in cybersecurity and PBX systems, a music producer under Travma, and an amateur radio operator (TA2DTZ).">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Enver Çolakoğlu - IT Professional & Music Producer">
+    <meta name="twitter:description" content="Discover Enver Çolakoğlu’s expertise in IT, music production, and amateur radio.">
+    <meta name="twitter:image" content="https://envercolakoglu.infy.uk/images/bio.png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+            color: #2d3748;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: #ffffff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        header .header-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        header i {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #e0e7ff;
+        }
+        header nav a.social-link {
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+        header nav a.social-link:hover {
+            color: #ffffff !important;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        main {
+            margin-top: 10vh;
+        }
+        .section-card {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.5s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        p, li {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+        }
+        ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .social-link {
+            color: #4a5568;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+        }
+        .social-link:hover {
+            color: #4f46e5;
+        }
+        .image-text-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            align-items: flex-start;
+            font-size: 1rem;
+        }
+        .image-text-container img {
+            flex-shrink: 0;
+        }
+        .image-text-container div {
+            flex: 1;
+        }
+        .fancy-frame {
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        .bio-image {
+            width: 300px;
+            max-width: 300px;
+            height: auto;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .section-text {
+            margin-bottom: 1rem;
+        }
+        .thought-leader-text {
+            margin-bottom: 1rem;
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: #4f46e5;
+            color: white;
+            padding: 0.75rem;
+            border-radius: 50%;
+            display: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        #back-to-top:hover {
+            background: #3730a3;
+        }
+        footer {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: #ffffff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        footer p {
+            color: #ffffff;
+        }
+        @media (min-width: 768px) {
+            header .header-title {
+                font-size: 3.5rem;
+            }
+            header p {
+                font-size: 1.1rem;
+            }
+            header i {
+                font-size: 1.1rem;
+            }
+        }
+        @media (max-width: 768px) {
+            header .header-title {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            header i {
+                font-size: 1rem;
+            }
+            header {
+                padding: 1.5rem 1rem;
+            }
+            main {
+                margin-top: 5vh;
+            }
+            .section-card {
+                padding: 1rem;
+            }
+            .image-text-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+            .bio-image {
+                width: 120px;
+                max-width: 120px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Adınız Soyadınız</h1>
-    <p>Web Developer | Müzik Prodüktörü | Amatör Telsizci</p>
-  </header>
+    <header>
+        <div class="container">
+            <div class="header-title">Enver Çolakoğlu</div>
+            <p>
+                <i class="fas fa-laptop-code"></i> IT Professional | 
+                <i class="fas fa-music"></i> Music Producer | 
+                <i class="fas fa-broadcast-tower"></i> Amateur Radio Operator - TA2DTZ | 
+                <i class="fas fa-binoculars"></i> Sky Observer
+            </p>
+            <nav>
+                <ul style="list-style: none; display: flex; gap: 1rem; justify-content: center;">
+                    <li><a href="#about" class="social-link">About</a></li>
+                    <li><a href="#professional" class="social-link">Professional</a></li>
+                    <li><a href="#projects" class="social-link">Projects</a></li>
+                    <li><a href="#music" class="social-link">Music</a></li>
+                    <li><a href="#contact" class="social-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <nav>
-    <a href="#about">Hakkımda</a>
-    <a href="#projects">Projeler</a>
-    <a href="#contact">İletişim</a>
-  </nav>
+    <main class="container">
+        <h1>Enver Çolakoğlu: IT Expert and Music Producer</h1>
+        <section id="about" class="section-card">
+            <h2><i class="fas fa-user"></i> About Enver Çolakoğlu</h2>
+            <div class="image-text-container">
+                <img src="https://envercolakoglu.infy.uk/images/bio.png" alt="Enver Çolakoğlu, IT professional and music producer portrait" class="fancy-frame bio-image" loading="lazy">
+                <div>
+                    <p>
+                        Since 1999, Enver Çolakoğlu has been actively involved in the IT industry, taking on various roles across multiple organizations. His passion for computers began with computer-assisted music production during his youth, which evolved into a professional career in IT systems, shaping his lifestyle. Explore my <a href="#projects" class="social-link">projects</a> to see how I blend technology and creativity.
+                    </p>
+                    <p>
+                        Throughout his career, Enver Çolakoğlu has developed expertise in backup solutions, the Microsoft product family, PBX systems, and cybersecurity products, delivering technical and strategic solutions to meet organizational needs. Learn more about my <a href="#professional" class="social-link">professional journey</a>.
+                    </p>
+                    <p>
+                        Enver’s interest in retro gaming reflects his curiosity about technology’s history. As an amateur radio operator with the call sign TA2DTZ, he explores another facet of communication technologies. His work as a white hat hacker allows him to contribute to cybersecurity through ethical practices. These disciplines enrich his multifaceted approach to technology.
+                    </p>
+                    <p>
+                        Driven by a commitment to continuous learning and innovation, Enver Çolakoğlu aims to make a meaningful impact in the IT industry. <a href="#contact" class="social-link">Get in touch</a> to explore collaboration opportunities.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <section id="about">
-    <h2>Hakkımda</h2>
-    <p>Benim adım ... Buraya kendinizi tanıtan kısa bir yazı ekleyebilirsiniz.</p>
-  </section>
+        <section id="professional" class="section-card">
+            <h2><i class="fas fa-briefcase"></i> Enver Çolakoğlu’s Professional Journey</h2>
+            <p class="section-text">
+                Enver Çolakoğlu’s career began with a fascination for computer-generated music, evolving into a robust IT profession. His expertise includes:
+            </p>
+            <ul>
+                <li><strong>Backup Solutions</strong>: Proficient in Acronis.</li>
+                <li><strong>Microsoft Ecosystem</strong>: Deep knowledge of Microsoft products.</li>
+                <li><strong>Cybersecurity</strong>: Certified in Sophos, Kaspersky, Safetica, and FortiGate.</li>
+                <li><strong>PBX Systems</strong>: Skilled in communication infrastructure design.</li>
+            </ul>
+            <p class="thought-leader-text">
+                Enver Çolakoğlu is a thought leader, contributing technical articles to <a href="https://www.cozumpark.com/" class="social-link" target="_blank" rel="noopener noreferrer">ÇözümPark</a> and participating in industry events like the ÇözümPark Bilişim Portalı gathering at Microsoft Türkiye.
+            </p>
+            <img src="https://envercolakoglu.infy.uk/images/cozumpark.jpg" alt="Enver Çolakoğlu at ÇözümPark Event, Microsoft Türkiye" class="fancy-frame" loading="lazy">
+        </section>
 
-  <section id="projects">
-    <h2>Projeler</h2>
-    <ul>
-      <li>🌐 Kişisel Web Sitesi</li>
-      <li>🎵 Müzik Prodüksiyonları</li>
-      <li>📡 Amatör Telsiz Çalışmaları</li>
-    </ul>
-  </section>
+        <section id="education" class="section-card">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <ul>
+                <li>Şişli Lisesi</li>
+                <li><strong>Beykent University</strong> – Computer Programming</li>
+                <li><strong>Anadolu University (AÖF)</strong>:
+                    <ul>
+                        <li>Management Information Systems</li>
+                        <li>Radio and Television Programming</li>
+                        <li>Education Faculty</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-  <section id="contact">
-    <h2>İletişim</h2>
-    <p>Bana e-posta ile ulaşabilirsiniz: <a href="mailto:ornek@email.com">ornek@email.com</a></p>
-  </section>
+        <section id="certifications" class="section-card">
+            <h2><i class="fas fa-certificate"></i> Certifications & Training</h2>
+            <div class="grid">
+                <ul>
+                    <li>Amateur Radio Operator - TA2DTZ</li>
+                    <li>IHA - 0 UAV Drone Certificate - Unmanned Aerial Vehicle</li>
+                    <li>Sophos ET80 – XG Firewall v17.0 – Engineer</li>
+                    <li>Sophos Certified Engineer</li>
+                    <li>Kaspersky Certified Professional: Endpoint Security and Management (002.11)</li>
+                    <li>KLE 019.10: Kaspersky Endpoint Security and Management (Small Business)</li>
+                    <li>Kaspersky KL 025.20: Anti Targeted Attack Platform</li>
+                    <li>Kaspersky Certified Professional: Endpoint Security and Management – What's New</li>
+                    <li>Kaspersky Endpoint Security Associate</li>
+                    <li>Kaspersky Certified Professional: Endpoint Security Cloud (040.80)</li>
+                    <li>Acronis Backup Specialist</li>
+                </ul>
+                <ul>
+                    <li>GFI WebMonitor – Level 100-200</li>
+                    <li>GFI Languard – Level 100-200</li>
+                    <li>GFI FaxMaker – Level 100-200</li>
+                    <li>MailStore Certified Archiving Specialist</li>
+                    <li>Microsoft Office Certified – Bilge Adam Akademi</li>
+                    <li>System and Network Engineering – Kayhan Kırbaş (Udemy)</li>
+                    <li>System and Network Engineering – 2 (GNU Linux) – Kayhan Kırbaş (Udemy)</li>
+                    <li>Introduction to Programming with Python – Levent Ertunalılar (Udemy)</li>
+                    <li>Linux System Administration – BTK Akademi</li>
+                    <li>Personal Information Security – BTK Akademi</li>
+                    <li>5G: Technologies, Architecture and Protocols – Dr. Moazzam Tiwana (Udemy)</li>
+                    <li>Coaching Training – BTK Akademi</li>
+                    <li>Scratch with Arduino Programming – BTK Akademi</li>
+                    <li>C# – BTK Akademi</li>
+                    <li>FortiGate Firewall Version 6.4 NSE4 Training – Ahmad Ali</li>
+                    <li>Algorithm Design – BTK Akademi</li>
+                    <li>Ethical Hacking Training – Ahmet Birkan (Udemy)</li>
+                    <li>Cyber Incident Detection and Response – BTK Akademi</li>
+                    <li>Ethical Hacking Course – Atıl Samancıoğlu (Udemy)</li>
+                    <li>Cisco Academy – Basic Network 1-2 (Udemy)</li>
+                </ul>
+            </div>
+        </section>
 
-  <footer>
-    <p>© 2025 - Tüm Hakları Saklıdır</p>
-  </footer>
+        <section id="skills" class="section-card">
+            <h2><i class="fas fa-tools"></i> Skills</h2>
+            <div class="grid">
+                <div>
+                    <h3>Technical</h3>
+                    <ul>
+                        <li>Visual Basic, Linux</li>
+                        <li>Network Engineering</li>
+                        <li>Cybersecurity & Backup Solutions</li>
+                        <li>Ethical Hacker</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Creative</h3>
+                    <ul>
+                        <li>Audio Engineering (Cubase, Studio One)</li>
+                        <li>Synthesizers & Music Production</li>
+                        <li>Retro Computing (Amiga, Commodore 64)</li>
+                        <li>HTML, PHP, C#, C++ Developer</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section-card">
+            <h2><i class="fas fa-cogs"></i> Services</h2>
+            <p class="section-text">
+                Contact Enver Çolakoğlu for installation and configuration of the following products and services:
+            </p>
+            <div class="grid">
+                <ul>
+                    <li>Sophos Firewall</li>
+                    <li>PfSense Firewall</li>
+                    <li>FortiGate Firewall</li>
+                    <li>Kaspersky Endpoint Security Family</li>
+                    <li>Xcitium Enterprise Security</li>
+                    <li>Acronis Cyber Backup</li>
+                    <li>Acronis Snap Deploy</li>
+                    <li>Sophos Endpoint Security</li>
+                    <li>Sophos Central</li>
+                    <li>Sophos Intercept-X</li>
+                    <li>MailStore</li>
+                    <li>GFI Languard</li>
+                    <li>GFI FaxMaker</li>
+                </ul>
+                <ul>
+                    <li>3CX PBX</li>
+                    <li>FreePBX</li>
+                    <li>Microsoft IIS Web Server</li>
+                    <li>CosoSys DLP</li>
+                    <li>Safetica DLP</li>
+                    <li>ForcePoint DLP (Semi Pro.)</li>
+                    <li>Microsoft Active Directory</li>
+                    <li>Microsoft Exchange</li>
+                    <li>Network Topology</li>
+                    <li>Web Based Radio Stream Servers</li>
+                    <li>WordPress, Joomla, PhpBB</li>
+                    <li>Arduino Projects</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="section-card">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <p class="section-text">
+                Explore Enver Çolakoğlu’s creative and technical projects:
+            </p>
+            <div>
+                <div>
+                    <h3>DIY Arcade Joystick</h3>
+                    <p>
+                        A custom-built arcade joystick compatible with RetroPie, Fightcade, and PlayStation, perfect for retro gaming enthusiasts.
+                        <a href="https://envercolakoglu.infy.uk/project/arcade/arcade-joistick.html" class="social-link" target="_blank" rel="noopener noreferrer">View project</a>.
+                    </p>
+                </div>
+                <div>
+                    <h3>Wireless Call Sign Decision Program</h3>
+                    <p>
+                        A program to assign unique wireless call signs for communication purposes, making the process easy and efficient.
+                        <a href="https://envercolakoglu.infy.uk/project/call-sign/wireless-call-sign.html" class="social-link" target="_blank" rel="noopener noreferrer">View project</a>.
+                    </p>
+                </div>
+                <div>
+                    <h3>Classic Morse vs Hybrid Morse</h3>
+                    <p>
+                        An interactive tool to convert text to Hybrid Morse 3.0 and Classic Morse code, with audio playback to compare both systems.
+                        <a href="https://envercolakoglu.infy.uk/project/morse/classicmorse-hybridmorse.html" class="social-link" target="_blank" rel="noopener noreferrer">Try it now</a>.
+                    </p>
+                </div>
+                <div>
+                    <h3>DIY Wi-Fi Jammer Arduino Project</h3>
+                    <p>
+                        A tool for testing and analyzing WiFi networks through controlled jamming techniques.
+                        <a href="https://envercolakoglu.infy.uk/project/wifi-jammer/wifi-jammer.html" class="social-link" target="_blank" rel="noopener noreferrer">Try it now</a>.
+                    </p>
+                </div>
+                <div>
+                    <h3>Silent Horizon Radio</h3>
+                    <p>
+                        A 24/7 live stream offering immersive Lo-Fi music.
+                        <a href="https://www.youtube.com/@SilentHorizonRadio" class="social-link" target="_blank" rel="noopener noreferrer">Listen now</a>.
+                    </p>
+                </div>
+                <div>
+                    <h3>Galactic Freaks Psychedelic Radio</h3>
+                    <p>
+                        A 24/7 stream delivering vibrant psychedelic music.
+                        <a href="https://galacticfreaks.site/public/gf" class="social-link" target="_blank" rel="noopener noreferrer">Tune in</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="music" class="section-card">
+            <h2><i class="fas fa-headphones"></i> Music Projects</h2>
+            <p class="section-text">
+                As <em>Travma</em>, Enver Çolakoğlu produces electronic and psychedelic music, with releases on major platforms:
+            </p>
+            <ul>
+                <li><a href="https://soundcloud.com/travma" class="social-link" target="_blank" rel="noopener noreferrer">SoundCloud</a></li>
+                <li><a href="https://www.youtube.com/user/TravmaPsychedelic" class="social-link" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                <li><a href="https://www.discogs.com/artist/659164-Travma" class="social-link" target="_blank" rel="noopener noreferrer">Discogs (Travma)</a></li>
+                <li><a href="http://classic.beatport.com/artist/travma/384736/tracks" class="social-link" target="_blank" rel="noopener noreferrer">Beatport</a></li>
+                <li><a href="https://sites.google.com/view/ezel-ebed-records/" class="social-link" target="_blank" rel="noopener noreferrer">Ezel Ebed Records</a></li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section-card">
+            <h2><i class="fas fa-envelope"></i> Get in Touch</h2>
+            <p class="section-text">
+                Connect with Enver Çolakoğlu for collaboration in IT, music, or community projects.
+            </p>
+            <div>
+                <p><strong>Email:</strong> <a href="mailto:envercolakoglu@outlook.com" class="social-link">envercolakoglu@outlook.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+908505321430" class="social-link">+90 850 532 14 30</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/enver-colakoglu-bilisim/" class="social-link" target="_blank" rel="noopener noreferrer">Enver Çolakoğlu</a></p>
+            </div>
+        </section>
+    </main>
+
+    <button id="back-to-top" title="Back to Top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <footer>
+        <div class="container">
+            <p>© 2003 Enver Çolakoğlu. All rights reserved. | Your IP Address: <span id="ip-address">Loading...</span></p>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Enver Çolakoğlu",
+        "jobTitle": "IT Professional, Music Producer, Amateur Radio Operator",
+        "description": "Enver Çolakoğlu is an experienced IT professional specializing in cybersecurity, backup solutions, and PBX systems. As Travma, he produces electronic and psychedelic music and operates as an amateur radio operator under the call sign TA2DTZ.",
+        "url": "https://envercolakoglu.infy.uk/",
+        "sameAs": [
+            "https://www.linkedin.com/in/enver-colakoglu-bilisim/",
+            "https://soundcloud.com/travma",
+            "https://www.youtube.com/user/TravmaPsychedelic",
+            "https://www.discogs.com/artist/659164-Travma",
+            "http://classic.beatport.com/artist/travma/384736/tracks",
+            "https://www.cozumpark.com/"
+        ],
+        "email": "mailto:envercolakoglu@outlook.com",
+        "telephone": "+908505321430",
+        "image": "https://envercolakoglu.infy.uk/images/bio.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Istanbul",
+            "addressCountry": "TR"
+        },
+        "knowsAbout": [
+            {
+                "@type": "Thing",
+                "name": "Cybersecurity",
+                "sameAs": "https://en.wikipedia.org/wiki/Cybersecurity"
+            },
+            {
+                "@type": "Thing",
+                "name": "Backup Solutions",
+                "sameAs": "https://en.wikipedia.org/wiki/Backup"
+            },
+            {
+                "@type": "Thing",
+                "name": "PBX Systems",
+                "sameAs": "https://en.wikipedia.org/wiki/Private_branch_exchange"
+            },
+            {
+                "@type": "Thing",
+                "name": "Music Production",
+                "sameAs": "https://en.wikipedia.org/wiki/Music_production"
+            },
+            {
+                "@type": "Thing",
+                "name": "Amateur Radio",
+                "sameAs": "https://en.wikipedia.org/wiki/Amateur_radio"
+            },
+            {
+                "@type": "Thing",
+                "name": "Ethical Hacking",
+                "sameAs": "https://en.wikipedia.org/wiki/White_hat_(computer_security)"
+            }
+        ],
+        "alumniOf": [
+            {
+                "@type": "EducationalOrganization",
+                "name": "Beykent University",
+                "description": "Computer Programming",
+                "sameAs": "https://www.beykent.edu.tr/"
+            },
+            {
+                "@type": "EducationalOrganization",
+                "name": "Anadolu University (AÖF)",
+                "description": "Management Information Systems, Radio and Television Programming, Education Faculty",
+                "sameAs": "https://www.anadolu.edu.tr/"
+            }
+        ]
+    }
+    </script>
+
+    <script>
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        const ipAddressElement = document.getElementById('ip-address');
+        if (ipAddressElement) {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(data => {
+                    ipAddressElement.textContent = data.ip;
+                })
+                .catch(error => {
+                    console.error('Error fetching IP address:', error);
+                    ipAddressElement.textContent = 'Unable to retrieve IP';
+                });
+        }
+    </script>
 </body>
 </html>
